@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar style="--background:#00796b">
+    <ion-title style="font-family: 'Roboto Bold'; text-align: center;color: white">Cosas Lindas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #00796b18">
+    <div *ngIf="displayed && arrayCosasLindas.length === 0" class="no-data width-100 height-100">
+      <h1>No hay cosas lindas</h1>
+    </div>
+    <div *ngIf="displayed" class="width-100">
+      <ion-card  *ngFor="let dato of this.arrayCosasLindas" style="--background:#f5f5f5; width: 95%; border-radius: 25px">
+        <ion-card-header>
+          <ion-card-title >{{dato.usuario}}</ion-card-title>
+            <hr>
+            <img class="picture" src='{{dato.link}}' />
+            <ion-card-subtitle>{{dato.fecha | date:"EEEE, MMMM d, y, h:mm a"}}
+              <br>
+              <div (click)="Like(dato)" style="font-size: 60px; text-align:center">
+              <ion-icon style="color: rgb(160, 0, 0)" name="heart"></ion-icon>
+              </div>
+              Votos:{{dato.votos}}
+            </ion-card-subtitle>    
+          </ion-card-header>
+        </ion-card>
+          <br>
+      </div>
+    
+</ion-content>

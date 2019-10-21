@@ -1,0 +1,40 @@
+.robotito{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    //margin-top: 15px;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+  }
+
+body
+{
+  background-color: #104d62;//e3f2fd
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.globalBackground {
+  background-color: #e3f2fd;
+  --background: #e3f2fd;
+}
+// .item-content {
+//   background-color:#e3f2fd !important;
+// }
+.item .item-content {
+  background-color: transparent !important;
+}
+.background-input {
+  margin-bottom: 0!important;
+  --background: transparent !important;
+  ion-item {
+    
+      --highlight-height: 0;
+      --background: transparent;
+      background: #e3f2fd;
+     
+  }
+}
+
+

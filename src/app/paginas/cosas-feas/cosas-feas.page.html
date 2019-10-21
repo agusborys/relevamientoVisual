@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar style="--background:#455a64">
+      <ion-title style="font-family: 'Roboto Bold'; text-align: center;color: white">Cosas Feas</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #455a6438">
+
+    <div *ngIf="displayed && arrayCosasFeas.length === 0" class="no-data width-100 height-100">
+        <h1>No hay cosas Feas</h1>
+      </div>
+      <div *ngIf="displayed" class="width-100">
+          <ion-card  *ngFor="let dato of this.arrayCosasFeas" style="--background:#f5f5f5; width: 95%;border-radius: 25px">
+              <ion-card-header>
+                <ion-card-title >{{dato.usuario}}</ion-card-title>
+                <hr>
+                <img class="picture" src='{{dato.link}}' />
+                <ion-card-subtitle>{{dato.fecha | date:"EEEE, MMMM d, y, h:mm a"}}
+                  <br><div (click)="Like(dato)" style="font-size: 60px; text-align:center">
+                      <ion-icon style="color: rgb(160, 0, 0)" name="heart"></ion-icon>
+                      </div>
+                      Votos:{{dato.votos}}
+                </ion-card-subtitle>    
+              </ion-card-header>
+          </ion-card>
+      </div>
+</ion-content>

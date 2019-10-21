@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="font-family: 'Roboto Bold'; text-align: center">Inicio</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="LogOut()">
+        <ion-icon style="color: white" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="no-scroll">
+  <div style="display: flex; flex-direction:column; height:100%">
+    <ion-button shape="round" expand="full" class="botones" style="--background:#00796b" (click)='cosasLindasClick()' >
+        <ion-icon name="thumbs-up"></ion-icon>
+          <div>COSAS LINDAS</div>
+      </ion-button>
+    <ion-button shape="round" expand="full" class="botones" style="--background:#455a64" (click)="cosasFeasClick()">
+        <ion-icon name="thumbs-down"></ion-icon>Cosas Feas
+    </ion-button>
+  </div>
+
+  
+</ion-content>

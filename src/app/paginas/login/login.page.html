@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+     <ion-title style="text-align:center"><ion-icon name="person"></ion-icon>Iniciar Sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="globalBackground">
+    <div >
+        <img src="assets/imgs/edificios_3.jpg" width="100%" height="300px">
+      </div>
+    <form padding>
+        <!-- <ion-row > -->
+          <!-- <ion-col> -->
+            <ion-list inset no-padding class="background-input">
+
+              <ion-item>          
+                <ion-label  position="floating">Correo</ion-label>
+                <ion-input type="text" name="email"  [(ngModel)]="email" required></ion-input>
+              </ion-item>
+
+              <ion-item >
+                  <ion-label position="floating">Contraseña</ion-label>
+                <ion-input type="password"  name="password" [(ngModel)]="password" required></ion-input>
+              </ion-item>
+
+            </ion-list>
+          <!-- </ion-col> -->
+        <!-- </ion-row> -->
+        <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label floating>Seleccionar Usuario</ion-label>
+                <ion-select [(ngModel)]="userSelect" name="SelecUser" ok-text="Ok" cancel-text="Cancelar" [selectedText]="userSelect"  (ionChange)="SeleccionUsuario()" >
+                  <ion-select-option value="admin">Administrador</ion-select-option>
+                  <ion-select-option value="invitado">Invitado</ion-select-option>
+                  <ion-select-option value="usuario">Usuario</ion-select-option>
+                  <ion-select-option value="anonimo">Anónimo</ion-select-option>
+                  <ion-select-option value="tester">Tester</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-button expand="block" (click)="Login()">Ingresar</ion-button>
+    </form>
+    <!-- <div class="robotito">
+        <img src="assets/imgs/empresa_2.png">
+      </div> -->
+</ion-content>
+

@@ -1,0 +1,16 @@
+.botones{
+    height: 50%;
+    display: block;
+    justify-content: center;
+    --border-radius: 15px;
+    border-radius: 15px;
+    border: none !important;
+    outline: none;
+    font-family: 'Roboto';
+    color: white;
+    font-size: 30px;
+}
+.ripple {
+    background-position: center;
+    transition: background 0.3s;
+  }
